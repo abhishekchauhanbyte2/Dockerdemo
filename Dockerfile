@@ -1,4 +1,4 @@
-FROM openjdk:8
+FROM openjdk:17
 RUN mkdir /app
 WORKDIR /app
 COPY target/DockerDemo-0.0.1-SNAPSHOT.jar /app
