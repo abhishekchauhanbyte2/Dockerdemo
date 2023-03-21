@@ -1,0 +1,55 @@
+<div>
+    <form action="/logout" method="get">
+        <button class="btn btn-danger" style="float: right;">Logout</button>
+    </form>
+    <form action="/users/add" method="post">
+        <button class="btn btn-primary">Add a record</button>
+    </form>
+</div>
+<br><br><br>
+<br>
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>Roll No.</th>
+            <th>Name</th>
+            <th>Date of Birth</th>
+            <th>Score</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <br>
+    <tbody>
+        <% for(let user of allUsers){ %>
+            <tr>
+
+                <th>
+                    <%=user.rollno%>
+                </th>
+                <th>
+                    <%=user.name%>
+                </th>
+                <th>
+                    <%=user.dob%>
+                </th>
+                <th>
+                    <%=user.score%>
+                </th>
+                <th>
+                    <ul class="list-inline m-0">
+                        <li class="list-inline-item">
+                            <button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip"
+                                data-placement="top" title="Edit"><i class="fa fa-edit"></i></button>
+                        </li>
+                        <li class="list-inline-item">
+                            <form action="/users/delete/<%=user.rollno%>" method="post">
+                            <button class="btn btn-danger btn-sm rounded-0" type="submit" data-toggle="tooltip"
+                                data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>
+                            </form>
+                        </li>
+                    </ul>
+                </th>
+            </tr>
+            <%}%>
+    </tbody>
+</table>

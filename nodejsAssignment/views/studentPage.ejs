@@ -1,0 +1,19 @@
+<div>
+    <form action="/logout" method="get">
+        <button class="btn btn-danger" style="float: right;">Logout</button>
+    </form>
+    <h3 class="text-center">Find Result</h3>
+    <br>
+    <br>
+    <form action="/users/search" method="post">
+        <fieldset>
+            <label for="rollNumber">Roll number :</label>
+            <input type="number" id="id" name="rollno"/>
+            <br><br>
+            <label for="dateOfBirth">Date Of Birth : </label>
+            <input type="date" id="dob" name="dob" />
+            <br><br>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </fieldset>
+    </form>
+</div>

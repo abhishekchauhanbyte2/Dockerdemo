@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    <form action="/logout" method="get">
+        <button class="btn btn-danger" style="float: right;">Logout</button>
+    </form>
+    <a href="/student">Back</a>
+    <!-- <div *ngIf="values.length === 0" class="text-center">
+        <strong>No Records Found!</strong>
+    </div> -->
+    <div>
+        <h3 class="text-center">Show Result</h3>
+        <h4>Roll Number : </h4> &nbsp; <%=user.rollno%>
+            <br><br>
+            <h4>Name : </h4> &nbsp; <%=user.name%>
+                <br><br>
+                <h4>Date of Birth : </h4> &nbsp; <%=user.dob%>
+                    <br><br>
+                    <h4>Score : </h4> &nbsp; <%=user.score%>
+                        <br><br>
+    </div>
+</div>
